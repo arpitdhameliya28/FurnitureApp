@@ -1,0 +1,6 @@
+framework module Pods_FurnitureApp_FurnitureAppUITests {
+  umbrella header "Pods-FurnitureApp-FurnitureAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCore
 import FirebaseAuth
 import FirebaseFirestore
 
@@ -28,72 +29,48 @@ class LoginVC: UIViewController {
         self.Login_Google.layer.cornerRadius = 10
         self.Login.layer.cornerRadius = 10
         self.Login_Google.layer.borderWidth = 2
+        
+        UserDefaults.standard.setValue(false, forKey: "UserLogin")
     }
     
     @IBAction func Login(_ sender: UIButton) {
         
         if self.Email_Id.text!.isEmpty || self.Password.text!.isEmpty {
-            
-            let alert = UIAlertController(title: "Empty", message: "Please Enter ID OR PASSWORD", preferredStyle: .alert)
-            
-            let btn1 = UIAlertAction(title: "Try Again", style: .default)
-            alert.addAction(btn1)
-            
-            self.present(alert, animated: true)
+            AlertPresent(Error: "Error!", Message: "Please Enter the email and password", vc: self)
             
         }
-        
-        else if !(self.Email_Id.text!.hasSuffix("@gmail.com")){
-            
-            let alert = UIAlertController(title: "Email ID", message: "Your Email ID is a Wrong", preferredStyle: .alert)
-            
-            let btn1 = UIAlertAction(title: "OK", style: .default)
-            alert.addAction(btn1)
-            
-            self.present(alert, animated: true)
-            
-        }
-        
-        else if self.Password.text!.count < 8 || self.Password.text!.count > 8  {
-            
-            let alert = UIAlertController(title: "Password", message: "Your Password is a Wrong", preferredStyle: .alert)
-            
-            let btn1 = UIAlertAction(title: "OK", style: .default)
-            alert.addAction(btn1)
-            
-            self.present(alert, animated: true)
-            
-        }
-        
         else {
-            
-            
-            
-            Auth.auth().createUser(withEmail: Email_Id.text ?? "", password: Password.text ?? "")
-            { authuser, error in
+            Auth.auth().signIn(withEmail: self.Email_Id.text!, password: self.Password.text!) { authuser, error in
                 if let err = error as? NSError
                 {
+                    print("User not Login")
                     print(err.localizedDescription)
+                    AlertPresent(Error: "Error", Message: "Incorrect username or Password", vc: self)
                 }
                 else
                 {
-                    print("Done")
-                    navigateScreen (NameOfStoryboard: "Home", identifier: "HomeVC", from: self)
+                    print("UserLogin")
+                    let userInfo = Auth.auth().currentUser
+                    let email = userInfo?.email
+                    UserDefaults.standard.setValue(true, forKey: "UserLogin")
+                    UserDefaults.standard.setValue(email, forKey: "UserEmail")
+                    setUserLogindata(id: userInfo!.uid , email: self.Email_Id.text!, pass: self.Password.text!)
+                    navigateScreen (NameOfStoryboard: "Home", identifier: "HomeVC", vc: self)
+                    
                 }
                 
             }
-            
-            
         }
     }
     
+    
     @IBAction func SignUp(_ sender: UIButton) {
-        navigateScreen (NameOfStoryboard: "Main", identifier: "SignUpVC", from: self)
+        navigateScreen (NameOfStoryboard: "Main", identifier: "SignUpVC", vc: self)
     }
     @IBAction func ForgetPassword(_ sender: UIButton) {
-        navigateScreen (NameOfStoryboard: "Main", identifier: "ForgotPasswordVC", from: self)
+        navigateScreen (NameOfStoryboard: "Main", identifier: "ForgotPasswordVC", vc: self)
     }
     @IBAction func BackBtn(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: false)
+        popVC(vc: self)
     }
 }

@@ -10,7 +10,6 @@ import UIKit
 class HomeVC02Cell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
-    
     @IBOutlet weak var CollectionView: UICollectionView!
     
     var Imagearr = ["Chair","Table","Sofa"]
@@ -47,5 +46,7 @@ class HomeVC02Cell: UITableViewCell, UICollectionViewDelegate, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 159, height: 235)
     }
+    
+    
     
 }

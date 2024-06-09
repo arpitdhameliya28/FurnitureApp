@@ -9,28 +9,56 @@ import Foundation
 import UIKit
 import FirebaseFirestore
 
-func setUserData(email: String, password: String, Mobile: String, name: String, id: String) {
+func setUserLogindata (id: String , email: String , pass: String) {
+    
+    let db = Firestore.firestore()
+    
+    let coll = db.collection("UserInfo")
+    coll.document(email).setData([
+        "Id": id,
+        "Email": email,
+        "Password": pass,
+    ])
+    
+}
+
+func setUserData(email: String, password: String, mobile: String, name: String, id: String) {
     
     let db = Firestore.firestore()
     let collection = db.collection("UserInfo")
     collection.document(email).setData([
     
-        "id" : id,
-        "name" : name,
-        "email" : email,
-        "password" : password,
-        "Mobile Number" : Mobile
+        "Id" : id,
+        "Name" : name,
+        "Email" : email,
+        "Password" : password,
+        "Mobile Number" : mobile
     
     
     ])
 }
-struct chatModel {
+
+func Setusermessage (senderId: String , message: String , reseiver: String , realtime : Date) {
     
-    var name = ""
-    var email = ""
+    let db = Firestore.firestore()
     
-    init(dic: [String : Any]) {
-        self.name = dic["name"] as? String ?? ""
-        self.email = dic["email"] as? String ?? ""
-    }
+    let collection = db.collection("Usermessage")
+    collection.document().setData([
+
+        "message": message,
+         CurrentUserUid: senderId,
+        "sender": senderId,
+        "reseiver": reseiver,
+        reseiver : reseiver,
+        "realtime": realtime
+    ])
 }
+
+
+
+
+
+
+
+
+

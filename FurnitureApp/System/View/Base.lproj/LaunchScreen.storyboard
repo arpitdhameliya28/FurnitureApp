@@ -1,25 +1,166 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="SzW-yC-p8O">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="2yE-OX-kCn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HsL-Eg-WYo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen3" translatesAutoresizingMaskIntoConstraints="NO" id="SUA-L7-pQV">
+                                <rect key="frame" x="0.0" y="-5" width="393" height="857"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNc-Qu-AQe">
+                                <rect key="frame" x="112" y="131" width="169" height="46"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVV-qA-1sV">
+                                <rect key="frame" x="20" y="185" width="353" height="40.666666666666657"/>
+                                <string key="text">Lorem Ipsum is simply text of theprinting
+and typesetting .</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sos-JU-fio"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SUA-L7-pQV" firstAttribute="top" secondItem="HsL-Eg-WYo" secondAttribute="top" constant="-5" id="4be-ZX-M5a"/>
+                            <constraint firstItem="HVV-qA-1sV" firstAttribute="leading" secondItem="Sos-JU-fio" secondAttribute="leading" constant="20" id="F5f-u2-bnf"/>
+                            <constraint firstItem="Sos-JU-fio" firstAttribute="trailing" secondItem="HVV-qA-1sV" secondAttribute="trailing" constant="20" id="KGa-SO-hPi"/>
+                            <constraint firstItem="SUA-L7-pQV" firstAttribute="trailing" secondItem="Sos-JU-fio" secondAttribute="trailing" id="UEA-ug-3WL"/>
+                            <constraint firstItem="dNc-Qu-AQe" firstAttribute="top" secondItem="Sos-JU-fio" secondAttribute="top" constant="72" id="WhV-ey-2Js"/>
+                            <constraint firstItem="SUA-L7-pQV" firstAttribute="leading" secondItem="Sos-JU-fio" secondAttribute="leading" id="iXN-C4-k6J"/>
+                            <constraint firstItem="dNc-Qu-AQe" firstAttribute="centerX" secondItem="HsL-Eg-WYo" secondAttribute="centerX" id="ja3-qe-EVn"/>
+                            <constraint firstItem="HVV-qA-1sV" firstAttribute="centerX" secondItem="HsL-Eg-WYo" secondAttribute="centerX" id="men-nP-ddJ"/>
+                            <constraint firstItem="HVV-qA-1sV" firstAttribute="top" secondItem="dNc-Qu-AQe" secondAttribute="bottom" constant="8" symbolic="YES" id="tR0-EP-uzA"/>
+                            <constraint firstAttribute="bottom" secondItem="SUA-L7-pQV" secondAttribute="bottom" id="xt3-wF-qXW"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQP-j7-L7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="-1688" y="263"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0Mu-VQ-rRd">
+            <objects>
+                <viewController id="8QS-1O-zBj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tvQ-sK-YUi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen1" translatesAutoresizingMaskIntoConstraints="NO" id="YeH-mE-Lt5">
+                                <rect key="frame" x="0.0" y="-5" width="393" height="857"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New arrival" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Dv-19-Uth">
+                                <rect key="frame" x="89.666666666666686" y="130" width="214" height="46"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTD-sL-fim">
+                                <rect key="frame" x="33" y="145" width="309" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8s4-24-aBw">
+                                <rect key="frame" x="20" y="184" width="353" height="40.666666666666657"/>
+                                <string key="text">Lorem Ipsum is simply text of theprinting
+and typesetting .</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W7W-c3-CNN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Dv-19-Uth" firstAttribute="top" secondItem="W7W-c3-CNN" secondAttribute="top" constant="71" id="1eN-Yt-aak"/>
+                            <constraint firstItem="YeH-mE-Lt5" firstAttribute="top" secondItem="tvQ-sK-YUi" secondAttribute="top" constant="-5" id="2Du-Bo-ogx"/>
+                            <constraint firstAttribute="bottom" secondItem="YeH-mE-Lt5" secondAttribute="bottom" id="6Hb-9l-3Xl"/>
+                            <constraint firstItem="8s4-24-aBw" firstAttribute="leading" secondItem="W7W-c3-CNN" secondAttribute="leading" constant="20" id="9Ph-go-PkD"/>
+                            <constraint firstItem="8s4-24-aBw" firstAttribute="centerX" secondItem="tvQ-sK-YUi" secondAttribute="centerX" id="VTk-1b-Pgs"/>
+                            <constraint firstItem="W7W-c3-CNN" firstAttribute="trailing" secondItem="8s4-24-aBw" secondAttribute="trailing" constant="20" id="ZTx-0u-1Rt"/>
+                            <constraint firstItem="YeH-mE-Lt5" firstAttribute="trailing" secondItem="W7W-c3-CNN" secondAttribute="trailing" id="adM-y4-zwo"/>
+                            <constraint firstItem="8s4-24-aBw" firstAttribute="top" secondItem="7Dv-19-Uth" secondAttribute="bottom" constant="8" id="ftS-Xa-l24"/>
+                            <constraint firstItem="7Dv-19-Uth" firstAttribute="centerX" secondItem="tvQ-sK-YUi" secondAttribute="centerX" id="pON-Mf-iGB"/>
+                            <constraint firstItem="YeH-mE-Lt5" firstAttribute="leading" secondItem="W7W-c3-CNN" secondAttribute="leading" id="tWh-Ux-5DC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyN-dN-1y3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-895" y="263"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Rjq-ys-07M">
+            <objects>
+                <viewController id="a6D-mt-QD2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Os4-d8-Fds">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen2" translatesAutoresizingMaskIntoConstraints="NO" id="8zZ-Pl-E49">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="857"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfm-Ik-6od">
+                                <rect key="frame" x="16" y="137" width="363" height="80.666666666666686"/>
+                                <string key="text">Our favourite
+looks for you style</string>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4y-Kp-NNJ">
+                                <rect key="frame" x="46.333333333333343" y="225.66666666666666" width="300.66666666666663" height="40.666666666666657"/>
+                                <string key="text">Many desktop publishing packages and
+web page aditors now use.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pOv-PH-Bse"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S4y-Kp-NNJ" firstAttribute="top" secondItem="Pfm-Ik-6od" secondAttribute="bottom" constant="8" id="29g-oN-XFj"/>
+                            <constraint firstAttribute="bottom" secondItem="8zZ-Pl-E49" secondAttribute="bottom" constant="-5" id="58n-LD-Kxq"/>
+                            <constraint firstItem="Pfm-Ik-6od" firstAttribute="top" secondItem="pOv-PH-Bse" secondAttribute="top" constant="78" id="HYp-Vq-luo"/>
+                            <constraint firstItem="8zZ-Pl-E49" firstAttribute="leading" secondItem="pOv-PH-Bse" secondAttribute="leading" id="Rrh-92-3Re"/>
+                            <constraint firstItem="pOv-PH-Bse" firstAttribute="trailing" secondItem="Pfm-Ik-6od" secondAttribute="trailing" constant="14" id="f8n-nR-Kj5"/>
+                            <constraint firstItem="Pfm-Ik-6od" firstAttribute="leading" secondItem="pOv-PH-Bse" secondAttribute="leading" constant="16" id="f9w-MJ-RE7"/>
+                            <constraint firstItem="8zZ-Pl-E49" firstAttribute="top" secondItem="Os4-d8-Fds" secondAttribute="top" id="gbY-Sv-K0n"/>
+                            <constraint firstItem="S4y-Kp-NNJ" firstAttribute="centerX" secondItem="Os4-d8-Fds" secondAttribute="centerX" id="tih-4B-idI"/>
+                            <constraint firstItem="8zZ-Pl-E49" firstAttribute="trailing" secondItem="pOv-PH-Bse" secondAttribute="trailing" id="zuc-ul-4aO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZs-TG-efd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127" y="263"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SplashScreen1" width="856" height="1852"/>
+        <image name="SplashScreen2" width="856" height="1852"/>
+        <image name="SplashScreen3" width="856" height="1852"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

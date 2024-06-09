@@ -11,7 +11,8 @@ class PaymentMethodVC: UIViewController {
     
     @IBOutlet weak var Back_btn: UIButton!
 
-
+    @IBOutlet weak var ContinueShopping: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,9 +20,11 @@ class PaymentMethodVC: UIViewController {
     }
     
 
+    @IBAction func ContinueShopping(_ sender: UIButton) {
+        navigateScreen(NameOfStoryboard: "Home", identifier: "HomeVC", vc: self)
+    }
     @IBAction func Back_btn(_ sender: UIButton) {
-        
-        self.navigationController?.popViewController(animated: false)
+       popVC(vc: self)
     }
 
 }

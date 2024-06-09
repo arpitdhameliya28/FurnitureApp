@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DecorationCell" id="gTV-IL-0wX" customClass="DecorationCell" customModule="Furniture" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="166" height="212"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="166" height="212"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFK-EB-Q37">
+                        <rect key="frame" x="0.0" y="0.0" width="166" height="212"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soft green chair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K19-pX-MKM">
+                                <rect key="frame" x="16.000000000000007" y="143" width="109.66666666666669" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 23.12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csR-q8-VIf">
+                                <rect key="frame" x="16" y="169" width="50" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GreenChair" translatesAutoresizingMaskIntoConstraints="NO" id="F7R-PT-Esg">
+                                <rect key="frame" x="7" y="12" width="153" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="csR-q8-VIf" firstAttribute="top" secondItem="K19-pX-MKM" secondAttribute="bottom" constant="8" symbolic="YES" id="5Tf-DV-bIu"/>
+                            <constraint firstAttribute="height" constant="212" id="9mL-3L-Hqs"/>
+                            <constraint firstAttribute="width" constant="166" id="J9Z-NX-acY"/>
+                            <constraint firstItem="K19-pX-MKM" firstAttribute="leading" secondItem="BFK-EB-Q37" secondAttribute="leading" constant="16" id="Tdm-Bc-Bmh"/>
+                            <constraint firstAttribute="bottom" secondItem="csR-q8-VIf" secondAttribute="bottom" constant="25" id="VJw-0H-Vyt"/>
+                            <constraint firstItem="csR-q8-VIf" firstAttribute="top" secondItem="K19-pX-MKM" secondAttribute="bottom" constant="8" symbolic="YES" id="aon-HT-iof"/>
+                            <constraint firstItem="csR-q8-VIf" firstAttribute="leading" secondItem="BFK-EB-Q37" secondAttribute="leading" constant="16" id="pqO-tm-cgs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="BFK-EB-Q37" secondAttribute="bottom" id="4Gt-0t-6tF"/>
+                <constraint firstItem="BFK-EB-Q37" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Y9e-Yw-shC"/>
+                <constraint firstItem="BFK-EB-Q37" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="q86-4M-bpc"/>
+                <constraint firstAttribute="trailing" secondItem="BFK-EB-Q37" secondAttribute="trailing" id="qhw-3r-gbZ"/>
+            </constraints>
+            <size key="customSize" width="163" height="88"/>
+            <connections>
+                <outlet property="ImageView" destination="F7R-PT-Esg" id="RWo-R4-Pgk"/>
+                <outlet property="View" destination="BFK-EB-Q37" id="0H6-Fh-3cN"/>
+                <outlet property="lbl_Name" destination="K19-pX-MKM" id="WQZ-Jo-Bei"/>
+                <outlet property="lbl_Rupees" destination="csR-q8-VIf" id="ywu-EO-9ra"/>
+            </connections>
+            <point key="canvasLocation" x="224.42748091603053" y="33.098591549295776"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="GreenChair" width="306" height="234"/>
+    </resources>
+</document>

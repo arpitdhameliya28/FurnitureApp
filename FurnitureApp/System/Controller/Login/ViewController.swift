@@ -17,11 +17,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func SignUp(_ sender: UIButton) {
-        navigateScreen (NameOfStoryboard: "Main", identifier: "SignUpVC", from: self)
+        navigateScreen (NameOfStoryboard: "Main", identifier: "SignUpVC", vc: self)
     }
     
     @IBAction func Login(_ sender: UIButton) {
-        navigateScreen (NameOfStoryboard: "Main", identifier: "LoginVC", from: self)
+        navigateScreen (NameOfStoryboard: "Main", identifier: "LoginVC", vc: self)
     }
 }
 

@@ -20,7 +20,7 @@ class Pay_choiceVC: UIViewController {
     
     @IBAction func Back_btn(_ sender: UIButton) {
         
-        self.navigationController?.popViewController(animated: false)
+        self.navigationController?.popViewController(animated: true)
     }
     
 

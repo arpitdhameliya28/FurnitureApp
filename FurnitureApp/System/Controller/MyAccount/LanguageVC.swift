@@ -9,7 +9,8 @@ import UIKit
 
 class LanguageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-
+    @IBOutlet weak var BackBtn: UIButton!
+    
     @IBOutlet weak var TableView: UITableView!
     
     var arr = ["English","Hindi","Gujarati","Panjabi","Hmong","Arabic","Igbo","Samoan","italian","Irish","Bangla","Shona","Russian","Urdu"]
@@ -44,8 +45,6 @@ class LanguageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     @IBAction func Back_Btn(_ sender: UIButton) {
-        
-        self.navigationController?.popViewController(animated: true)
-        
+        popVC(vc: self)
     }
 }
