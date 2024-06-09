@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeVC02Cell" rowHeight="351" id="KGk-i7-Jjw" customClass="HomeVC02Cell" customModule="Furniture" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="350"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="388" height="350"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ron-86-vuw">
+                        <rect key="frame" x="20" y="10" width="340" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTR-oc-qRR">
+                                <rect key="frame" x="8" y="8" width="85" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Dpc-st-FIV"/>
+                                    <constraint firstAttribute="width" constant="85" id="ZDB-jt-b3l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVc-E3-EN6">
+                                <rect key="frame" x="227" y="6" width="107" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="107" id="Tgz-oA-RJs"/>
+                                    <constraint firstAttribute="height" constant="27" id="pVA-Na-5x3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Categorise">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aVc-E3-EN6" firstAttribute="top" secondItem="ron-86-vuw" secondAttribute="top" constant="6" id="4Z1-iH-cqG"/>
+                            <constraint firstAttribute="bottom" secondItem="aVc-E3-EN6" secondAttribute="bottom" constant="6" id="WLD-kH-uwq"/>
+                            <constraint firstAttribute="bottom" secondItem="sTR-oc-qRR" secondAttribute="bottom" constant="8" id="jh1-J0-l38"/>
+                            <constraint firstItem="sTR-oc-qRR" firstAttribute="leading" secondItem="ron-86-vuw" secondAttribute="leading" constant="8" id="o24-hN-0zx"/>
+                            <constraint firstAttribute="trailing" secondItem="aVc-E3-EN6" secondAttribute="trailing" constant="6" id="psz-Dj-g5v"/>
+                            <constraint firstItem="sTR-oc-qRR" firstAttribute="top" secondItem="ron-86-vuw" secondAttribute="top" constant="8" id="qcY-Vw-SUQ"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="S96-S2-gQ3">
+                        <rect key="frame" x="0.0" y="57" width="388" height="291"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="388" id="bqk-mP-vZT"/>
+                            <constraint firstAttribute="height" constant="291" id="xdC-ag-YcP"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DFn-4c-4qv">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="S96-S2-gQ3" secondAttribute="trailing" id="Drm-YJ-cvG"/>
+                    <constraint firstItem="S96-S2-gQ3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LwF-g4-a4k"/>
+                    <constraint firstItem="ron-86-vuw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="V1w-Dx-HMv"/>
+                    <constraint firstItem="S96-S2-gQ3" firstAttribute="top" secondItem="ron-86-vuw" secondAttribute="bottom" constant="8" symbolic="YES" id="Xu2-gK-rZT"/>
+                    <constraint firstItem="ron-86-vuw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="bfy-Bb-vHy"/>
+                    <constraint firstAttribute="bottom" secondItem="S96-S2-gQ3" secondAttribute="bottom" constant="2" id="ea5-em-kSA"/>
+                    <constraint firstItem="S96-S2-gQ3" firstAttribute="top" secondItem="ron-86-vuw" secondAttribute="bottom" constant="8" symbolic="YES" id="qhH-ZJ-qH1"/>
+                    <constraint firstAttribute="trailing" secondItem="ron-86-vuw" secondAttribute="trailing" constant="28" id="sDF-Pg-zP8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="CollectionView" destination="S96-S2-gQ3" id="sBg-xS-2JO"/>
+            </connections>
+            <point key="canvasLocation" x="141.98473282442748" y="40.140845070422536"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
